@@ -33,6 +33,7 @@ public class MainPresenter extends BasePresenter  {
         mvpMainView.showLoading();
         //http request method
         sendHttp(phoneString);
+        //
     }
 
     private void sendHttp(String phoneString){
