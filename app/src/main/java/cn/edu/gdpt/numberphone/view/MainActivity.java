@@ -1,6 +1,8 @@
 package cn.edu.gdpt.numberphone.view;
 
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,16 +21,17 @@ import cn.edu.gdpt.numberphone.R;
 import cn.edu.gdpt.numberphone.mvp.impl.MvpLoadingView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,MvpMainView {
-
-    private EditText mEtPhoneInput;
-    private Button mBtnSearch;
+    private MyDatabaseHelper dbHelper;
+    private EditText mEtPhoneInput,name,password;
+    private Button mBtnSearch,register;
     private TextView mTvProvince;
     private TextView mTvCatName;
     private TextView mTvCarrier;
     private TextView mTvPhoneNum;
     private MainPresenter mainPresenter;
     private LoadingDialog loadingDialog;
-
+    private String name1;
+    private String password1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
