@@ -1,6 +1,5 @@
 package cn.edu.gdpt.numberphone.view;
 
-
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +11,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
+import java.util.Random;
+
 import cn.edu.gdpt.numberphone.model.Phone;
 import cn.edu.gdpt.numberphone.mvp.impl.MvpMainView;
 import cn.edu.gdpt.numberphone.mvp.impl.MainPresenter;
@@ -20,11 +23,11 @@ import cn.edu.gdpt.numberphone.view.LoadingDialog;
 import cn.edu.gdpt.numberphone.R;
 import cn.edu.gdpt.numberphone.mvp.impl.MvpLoadingView;
 
-/*public class MainActivity extends AppCompatActivity implements View.OnClickListener,MvpMainView {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,MvpMainView {
     private MyDatabaseHelper dbHelper;
     private EditText mEtPhoneInput,name,password;
     private Button mBtnSearch,register;
-    private TextView mTvProvince;
+    private TextView mTvProvince,luck;
     private TextView mTvCatName;
     private TextView mTvCarrier;
     private TextView mTvPhoneNum;
@@ -36,12 +39,13 @@ import cn.edu.gdpt.numberphone.mvp.impl.MvpLoadingView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mEtPhoneInput = (EditText) findViewById(R.id.et_phone_input);
-        mBtnSearch = (Button) findViewById(R.id.btn_search);
-        mTvPhoneNum = (TextView) findViewById(R.id.tv_phone_num);
-        mTvProvince = (TextView) findViewById(R.id.tv_province);
-        mTvCatName = (TextView) findViewById(R.id.tv_catName);
-        mTvCarrier = (TextView) findViewById(R.id.tv_carrier);
+        mEtPhoneInput = findViewById(R.id.et_phone_input);
+        mBtnSearch = findViewById(R.id.btn_search);
+        mTvPhoneNum = findViewById(R.id.tv_phone_num);
+        mTvProvince = findViewById(R.id.tv_province);
+        mTvCatName = findViewById(R.id.tv_catName);
+        mTvCarrier = findViewById(R.id.tv_carrier);
+       luck= findViewById(R.id.tv_luck);
 
         mBtnSearch.setOnClickListener(this);
         mainPresenter = new MainPresenter(this);
@@ -55,6 +59,20 @@ import cn.edu.gdpt.numberphone.mvp.impl.MvpLoadingView;
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_search){
+
+
+            int num = (int) (Math.random()*(3+1));
+           if (num==0){
+               luck.setText("大吉");
+           }  if (num==1){
+                luck.setText("大凶");
+            }  if (num==2){
+                luck.setText("小吉");
+            }  if (num==3){
+                luck.setText("小凶");
+            }
+
+
             if (!isEmpty()){
                 mainPresenter.searchPhoneInfo(mEtPhoneInput.getText().toString());
                 mEtPhoneInput.setText("");
@@ -93,4 +111,5 @@ import cn.edu.gdpt.numberphone.mvp.impl.MvpLoadingView;
         mTvCatName.setText("运营商："+phone.getCatName());
         mTvCarrier.setText("运营者："+phone.getCarrier());
     }
-}*/
+
+}

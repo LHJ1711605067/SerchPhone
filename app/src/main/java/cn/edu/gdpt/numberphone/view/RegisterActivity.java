@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,7 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String psw1=pref.getString("psw","");
                 if (name.equals(name)&&psw.equals(psw1)){
                     Toast.makeText(getApplicationContext(),"登录成功",Toast.LENGTH_SHORT).show();
-                  Intent intent =new Intent(getApplicationContext(),Main2Activity.class);
+                  Intent intent =new Intent(getApplicationContext(), MainActivity.class);
                   startActivity(intent);
                 }if(!name.equals(name1)||!psw.equals(psw1)){
 

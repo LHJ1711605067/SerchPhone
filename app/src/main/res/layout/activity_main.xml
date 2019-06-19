@@ -121,14 +121,18 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            >
             <TextView
+                android:textSize="20dp"
                 android:id="@+id/tv_luck"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp"
-                android:text="吉 凶：" />
+                android:gravity="center"
+                android:text="吉 凶" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
