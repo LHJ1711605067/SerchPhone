@@ -3,8 +3,7 @@ import android.util.Log;
 
 import cn.edu.gdpt.numberphone.business.HttpUtil;
 import cn.edu.gdpt.numberphone.model.Phone;
-import cn.edu.gdpt.numberphone.mvp.impl.MvpMainView;
-import cn.edu.gdpt.numberphone.view.MainActivity;
+import cn.edu.gdpt.numberphone.view.Main2Activity;
 
 import com.google.gson.Gson;
 
@@ -61,7 +60,7 @@ public class MainPresenter extends BasePresenter  {
         httpUtil.sendGetHttp(mUrl,map);
     }
 
-    public void attach(MainActivity mainActivity) {
+    public void attach(Main2Activity mainActivity) {
 
     }
 }

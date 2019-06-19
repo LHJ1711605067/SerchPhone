@@ -1,7 +1,7 @@
 package cn.edu.gdpt.numberphone.view;
 
 public class LoadingDialog {
-    public LoadingDialog(MainActivity mainActivity) {
+    public LoadingDialog(Main2Activity mainActivity) {
 
        return;
     }

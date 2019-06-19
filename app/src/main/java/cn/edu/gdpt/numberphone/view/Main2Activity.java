@@ -1,6 +1,5 @@
 package cn.edu.gdpt.numberphone.view;
 
-
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -20,7 +19,7 @@ import cn.edu.gdpt.numberphone.view.LoadingDialog;
 import cn.edu.gdpt.numberphone.R;
 import cn.edu.gdpt.numberphone.mvp.impl.MvpLoadingView;
 
-/*public class MainActivity extends AppCompatActivity implements View.OnClickListener,MvpMainView {
+public class Main2Activity extends AppCompatActivity implements View.OnClickListener,MvpMainView {
     private MyDatabaseHelper dbHelper;
     private EditText mEtPhoneInput,name,password;
     private Button mBtnSearch,register;
@@ -93,4 +92,4 @@ import cn.edu.gdpt.numberphone.mvp.impl.MvpLoadingView;
         mTvCatName.setText("运营商："+phone.getCatName());
         mTvCarrier.setText("运营者："+phone.getCarrier());
     }
-}*/
+}

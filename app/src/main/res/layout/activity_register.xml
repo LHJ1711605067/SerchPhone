@@ -10,66 +10,66 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/tb_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="注    册"
-            android:layout_centerHorizontal="true"
-            android:textSize="50dp"
-            android:layout_marginTop="100dp"
-            />
-        <EditText
-             android:id="@+id/edt_name"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content" 
-            android:layout_below="@+id/tb_title"
-            android:layout_centerHorizontal="true"
-            android:hint="用户名："
-            android:textSize="20dp"
-            android:layout_marginTop="50dp"
-            />
-        <EditText
-             android:id="@+id/edt_password"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_name"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:hint="密码："
-            android:inputType="textPassword"
-
-
-            />
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@+id/edt_password"
-             android:gravity="center"
-            android:layout_marginTop="50dp"
-            >
-            <Button
-                android:id="@+id/btn_register"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="注册"
-                android:textSize="20dp"
+                android:text="注    册"
+                android:layout_centerHorizontal="true"
+                android:textSize="50dp"
+                android:layout_marginTop="100dp"
                 />
-            <Button
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_sign"
-                android:text="登录"
+                android:layout_below="@+id/tv_title"
+                android:layout_centerHorizontal="true"
+                android:hint="用户名："
                 android:textSize="20dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
                 />
-        </LinearLayout>
-    </RelativeLayout>
-        
-    </LinearLayout>
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:hint="密码："
+                android:inputType="textPassword"
 
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/edt_password"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                >
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注册"
+                    android:textSize="20dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_sign"
+                    android:text="登录"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
