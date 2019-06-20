@@ -56,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }if(name.equals("")||psw.equals("")){
 
                 Toast.makeText(getApplicationContext(),"账号或密码不能为空",Toast.LENGTH_SHORT).show();
-                }if(!name.equals(name1)||!psw.equals(psw1)){
+                }if((!name.equals(name1)||!psw.equals(psw1))&&(!name.equals("")||!psw.equals(""))){
                 Toast.makeText(getApplicationContext(),"账号或密码错误",Toast.LENGTH_SHORT).show();
 
             }
