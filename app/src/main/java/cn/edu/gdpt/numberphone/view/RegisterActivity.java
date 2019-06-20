@@ -49,14 +49,16 @@ public class RegisterActivity extends AppCompatActivity {
                 SharedPreferences pref= getSharedPreferences("Phone",MODE_PRIVATE);
                 String name1=pref.getString("name","");
                 String psw1=pref.getString("psw","");
-                if (name.equals(name)&&psw.equals(psw1)){
+                if (name.equals(name1)&&psw.equals(psw1)){
                     Toast.makeText(getApplicationContext(),"登录成功",Toast.LENGTH_SHORT).show();
                   Intent intent =new Intent(getApplicationContext(), MainActivity.class);
                   startActivity(intent);
-                }if(!name.equals(name1)||!psw.equals(psw1)){
+                }if(name.equals("")||psw.equals("")){
 
-                Toast.makeText(getApplicationContext(),"账号或密码错误",Toast.LENGTH_SHORT).show();
-                }
+                Toast.makeText(getApplicationContext(),"账号或密码不能为空",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getApplicationContext(),"账号或密码错误",Toast.LENGTH_LONG).show();
+            }
 
         }
     });
