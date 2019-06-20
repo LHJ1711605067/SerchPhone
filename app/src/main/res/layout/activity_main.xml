@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="@drawable/af"
     android:gravity="center_vertical"
     android:orientation="vertical"
     tools:context="cn.edu.gdpt.numberphone.view.MainActivity"
-    tools:ignore="MissingDefaultResource">
+    tools:ignore="MissingDefaultResource"
+
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -59,22 +61,23 @@
         android:layout_marginTop="10dp"
 
         android:orientation="vertical"
-        android:background="@android:color/background_light">
+        android:background="@drawable/qw">
 
            />
-       <TextView
-           android:id="@+id/tv_find"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:hint="上一个查询的号码为："
-           android:textSize="20dp"
-           android:layout_gravity="center"
-           android:gravity="center"
-           android:layout_marginTop="40dp"
-           />
+     <TextView
+        android:id="@+id/tv_find1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="历史记录"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+         android:layout_marginTop="30dp"
+
+        />
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="20dp"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp">
@@ -85,7 +88,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp"
-                android:text="手机号：" />
+                android:text="手机号："
+                android:textSize="20dp"
+                />
         </RelativeLayout>
 
         <RelativeLayout
@@ -99,7 +104,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:text="省份："
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:textSize="20dp"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -114,7 +120,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp"
-                android:text="运营商：" />
+                android:text="运营商："
+                android:textSize="20dp"
+                />
         </RelativeLayout>
 
         <RelativeLayout
@@ -128,7 +136,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp"
-                android:text="运营者：" />
+                android:text="运营者："
+                android:textSize="20dp"
+                />
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"

@@ -53,10 +53,11 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"登录成功",Toast.LENGTH_SHORT).show();
                   Intent intent =new Intent(getApplicationContext(), MainActivity.class);
                   startActivity(intent);
-                }if(name.equals("")||psw.equals("")){
+                }if(name.equals("")&&psw.equals("")){
 
-                Toast.makeText(getApplicationContext(),"账号或密码不能为空",Toast.LENGTH_SHORT).show();
-                }if((!name.equals(name1)||!psw.equals(psw1))&&(!name.equals("")||!psw.equals(""))){
+                Toast.makeText(getApplicationContext(),"账号密码不能为空",Toast.LENGTH_SHORT).show();
+                }
+                if((!name.equals(name1)||!psw.equals(psw1))&&(!name.equals("")||!psw.equals(""))){
                 Toast.makeText(getApplicationContext(),"账号或密码错误",Toast.LENGTH_SHORT).show();
 
             }

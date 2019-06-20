@@ -19,7 +19,7 @@ private Context mContext;
     @Override
     public void onCreate(SQLiteDatabase db) {
 db.execSQL(CREATE_PHONE);
-        Toast.makeText(mContext,"成功",Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
