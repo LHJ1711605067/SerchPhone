@@ -36,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
                  }      if (name.equals("")){
                     Toast.makeText(getApplicationContext(),"账号不能为空",Toast.LENGTH_SHORT).show();
                 }if (psw.equals("")){
-                    Toast.makeText(getApplicationContext(),"账密码不能为空",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"密码不能为空",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -56,8 +56,9 @@ public class RegisterActivity extends AppCompatActivity {
                 }if(name.equals("")||psw.equals("")){
 
                 Toast.makeText(getApplicationContext(),"账号或密码不能为空",Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(getApplicationContext(),"账号或密码错误",Toast.LENGTH_LONG).show();
+                }if(!name.equals(name1)||!psw.equals(psw1)){
+                Toast.makeText(getApplicationContext(),"账号或密码错误",Toast.LENGTH_SHORT).show();
+
             }
 
         }

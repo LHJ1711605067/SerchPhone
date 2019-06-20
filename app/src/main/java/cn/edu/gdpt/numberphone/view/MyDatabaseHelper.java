@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
 public class MyDatabaseHelper extends SQLiteOpenHelper {
-public static final String  CREATE_PHONE="create table Phone("+"id integer primary key autoincrement,"+"name integer,"+"password integer)";
+public static final String  CREATE_PHONE="create table Phone("+"id integer primary key autoincrement,"+"number intege)";
 private Context mContext;
 
     public MyDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {

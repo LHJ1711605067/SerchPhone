@@ -1,6 +1,7 @@
 package cn.edu.gdpt.numberphone.view;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.Currency;
 import java.util.Random;
 
 import cn.edu.gdpt.numberphone.model.Phone;
@@ -31,10 +33,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView mTvCatName;
     private TextView mTvCarrier;
     private TextView mTvPhoneNum;
+    private TextView find;
     private MainPresenter mainPresenter;
     private LoadingDialog loadingDialog;
     private String name1;
     private String password1;
+    private MyDatabaseHelper myDatabaseHelper;
+
+    public MainActivity() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mTvCatName = findViewById(R.id.tv_catName);
         mTvCarrier = findViewById(R.id.tv_carrier);
        luck= findViewById(R.id.tv_luck);
-
+         find=findViewById(R.id.tv_find);
         mBtnSearch.setOnClickListener(this);
         mainPresenter = new MainPresenter(this);
         mainPresenter.attach(this);
@@ -59,7 +67,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_search){
+       String number=mEtPhoneInput.getText().toString().trim();
 
+
+
+    MyDatabaseHelper dbhelper=new MyDatabaseHelper(getApplicationContext(),"number_db",null,1);
+    SQLiteDatabase db=dbhelper.getWritableDatabase();
+ContentValues values =new ContentValues();
+values.put("number",number);
+db.insert("Phone",null,values);
+Toast.makeText(getApplicationContext(),"添加成功",Toast.LENGTH_LONG).show();
+
+            Cursor cursor= db.query("Phone",new String[]{"number"},null,null,null,null,null);
+            while (cursor.moveToNext()){
+                String number1=cursor.getString(cursor.getColumnIndex("number"));
+                          find.setText(number1);
+
+            }
+ cursor.close();
 
             int num = (int) (Math.random()*(3+1));
            if (num==0){
