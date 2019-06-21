@@ -84,6 +84,8 @@ values.put("number",number);
 db.insert("Phone",null,values);
 
 
+
+
 Cursor cursor= db.query("Phone",new String[]{"number"},null,null,null,null,null);
 while (cursor.moveToNext()){
     String number2=cursor.getString(cursor.getColumnIndex("number"));
@@ -92,13 +94,13 @@ while (cursor.moveToNext()){
              cursor.close();
 
             int num = (int) (Math.random()*(3+1));
-           if (num==0){
+           if (num == 0&&(number.length()== 11)){
                luck.setText("大吉");
-           }  if (num==1){
+           }  if (num==1&&(number.length()== 11)){
                 luck.setText("大凶");
-            }  if (num==2){
+            }  if (num==2&&(number.length()== 11)){
                 luck.setText("小吉");
-            }  if (num==3){
+            }  if (num==3&&(number.length()== 11)){
                 luck.setText("小凶");
             }
 
