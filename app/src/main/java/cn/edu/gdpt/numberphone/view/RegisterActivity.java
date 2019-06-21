@@ -49,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
                 SharedPreferences pref= getSharedPreferences("Phone",MODE_PRIVATE);
                 String name1=pref.getString("name","");
                 String psw1=pref.getString("psw","");
-                if (name.equals(name1)&&psw.equals(psw1)){
+                if ((name.equals(name1)&&psw.equals(psw1))&&(!name.equals("")&&(!psw.equals("")))){
                     Toast.makeText(getApplicationContext(),"登录成功",Toast.LENGTH_SHORT).show();
                   Intent intent =new Intent(getApplicationContext(), MainActivity.class);
                   startActivity(intent);
